@@ -138,7 +138,7 @@ li
 	display: flex;
     flex-direction: row;
 	align-items: center;
-    color: white;
+    color: black;
     background: #00000009;
 	font-family: var(--font-sans-light);
 	font-size: var(--chakra-fontSizes-xl);
