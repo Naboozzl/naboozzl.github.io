@@ -29,13 +29,13 @@
 
 	/* 배경 색 - 그라디언트 */
 	/* 노래책 주인의 취향대로 바꾸어 주면 됩니다. */
-	--bg-gradient-1:	#a7bbbc;
-	--bg-gradient-2:	#aaa19e; 
+	--bg-gradient-1:	#f1f1ee;
+	--bg-gradient-2:	#fcfc0c; 
 	--bg-gradient-3:	#f3f7ff; 
 	--bg-gradient-4:	#5d72d8;
 	
 
-    --site-name: "테 이프의 노래책"
+    --site-name: "미래의 노래책"
 }
 
 :root {
