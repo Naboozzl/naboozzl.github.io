@@ -29,11 +29,12 @@
 
 	/* 배경 색 - 그라디언트 */
 	/* 노래책 주인의 취향대로 바꾸어 주면 됩니다. */
-	--bg-gradient-1:	#fbfb12;
-	--bg-gradient-2:	#70fc0c;
-	--bg-gradient-3:	#221f1f;
-	--bg-gradient-4:	#f0eeee;
-
+	--bg-gradient-1:	#FFFF00;
+	--bg-gradient-2:	#FFFF80;
+	--bg-gradient-3:	#FFFFB3;
+	--bg-gradient-4:	#FFFFE0;
+        --bg-gradient-5:	#FFFFFF;
+	
     --site-name: "미래의 노래책"
 }
 
