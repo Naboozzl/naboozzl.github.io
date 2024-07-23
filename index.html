@@ -1,171 +1,188 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="미래가 부를 수 있는 노래 모음집">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
+    <title>미래의 노래책</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="styles/fonts.css" rel="stylesheet" type="text/css">
+    <link href="styles/parameters.css" rel="stylesheet" type="text/css">
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+    <style>
+        /* 추가된 스타일 */
+        header {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: #f8f9fa; /* 헤더 배경색 */
+        }
 
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1">
-		<meta name="description" content="테 이프가 부를 수 있는 노래 모음집">
-		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
-		<title>테 이프의 노래책</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="styles/fonts.css" rel="stylesheet" type="text/css">
-		<link href="styles/parameters.css" rel="stylesheet" type="text/css">
-		<link href="styles/style.css" rel="stylesheet" type="text/css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>    
-	</head>
+        header img {
+            width: 50px; /* 로고 크기 조정 */
+            height: auto;
+            margin-right: 10px; /* 이미지와 텍스트 사이 간격 */
+        }
+    </style>
+</head>
+<body>
+    <!-- 추가된 헤더 -->
+    <header>
+        <img src="naboozzl.github.io/assets/profile.png" alt="Logo">
+        <h1>미래의 노래책</h1>
+    </header>
 
-	<body>
-		<div class="base">
-			<!----------------------------------- 본문 -->
-			<div class="main-content" id="mainContent">
-			
-				<!----------------------------------- 랜덤 -->
-				<div class="random-list">
-					<!----------------------------------- 헤더 -->
-					<div class="header-gruop">
-						<h2 class="radom-list-header">
-							<formatted-string class="random-list-title">
-								랜덤 리스트
-							</formatted-string>
-						</h2>
-						<div class="random-roll">
-							<div class="boom-box">
-								<input type="text" id="boom-percent" value="0.0">
-								<div>퍼센트</div>
-							</div>
-							<button type="button" class="rnd-button clickable" id="rndBtn" onclick="new_random();" >
-								<formatted-string class="rnd-text">
-									돌리기!
-								</formatted-string>
-							</button>
-						</div>
-					</div>
-					<!----------------------------------- 본문 -->
-					<div class="content-group">
-						<random class="random-music-list" id="musicListRandom">
-						</random>
-					</div>
-				</div>
+    <div class="base">
+        <!----------------------------------- 본문 -->
+        <div class="main-content" id="mainContent">
+            <!----------------------------------- 랜덤 -->
+            <div class="random-list">
+                <!----------------------------------- 헤더 -->
+                <div class="header-gruop">
+                    <h2 class="radom-list-header">
+                        <formatted-string class="random-list-title">
+                            랜덤 리스트
+                        </formatted-string>
+                    </h2>
+                    <div class="random-roll">
+                        <div class="boom-box">
+                            <input type="text" id="boom-percent" value="0.0">
+                            <div>퍼센트</div>
+                        </div>
+                        <button type="button" class="rnd-button clickable" id="rndBtn" onclick="new_random();">
+                            <formatted-string class="rnd-text">
+                                돌리기!
+                            </formatted-string>
+                        </button>
+                    </div>
+                </div>
+                <!----------------------------------- 본문 -->
+                <div class="content-group">
+                    <random class="random-music-list" id="musicListRandom">
+                    </random>
+                </div>
+            </div>
 
-				<!----------------------------------- 모든 노래, 검색 결과 -->
-				<div class="main-list">
-					<!----------------------------------- 헤더 -->
-					<div class="header-gruop">
-						<div class="title-group">
-							<!----------------------------------- 헤더 텍스트 -->
-							<h2 class="main-list-header">
-								<formatted-string class="main-list-title">
-									모든 노래
-								</formatted-string>
-							</h2>
-							<!----------------------------------- 검색 영역 -->
-							<div class="search-box">
-								<div class="search-icon">
-									<i class="fa-solid fa-magnifying-glass"></i>
-								</div>
-								<input type="text" id="inputsearch" onkeydown="searchEnter();" oninput="searchUpdate();" placeholder="Search" class="search-text">
-							</div>
-						</div>	
+            <!----------------------------------- 모든 노래, 검색 결과 -->
+            <div class="main-list">
+                <!----------------------------------- 헤더 -->
+                <div class="header-gruop">
+                    <div class="title-group">
+                        <!----------------------------------- 헤더 텍스트 -->
+                        <h2 class="main-list-header">
+                            <formatted-string class="main-list-title">
+                                모든 노래
+                            </formatted-string>
+                        </h2>
+                        <!----------------------------------- 검색 영역 -->
+                        <div class="search-box">
+                            <div class="search-icon">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                            <input type="text" id="inputsearch" onkeydown="searchEnter();" oninput="searchUpdate();" placeholder="Search" class="search-text">
+                        </div>
+                    </div>  
 
-						<!----------------------------------- 헤더 분류 선택자 -->
-						<div class="selector">
-							<!----------------------------------- 대분류 선택자 -->
-							
-							<category>
-							</category>
-							<!----------------------------------- 정렬 선택자 -->
-							<div class="sort-select">
-								<button type="button" class="sort-button clickable" id="byArtist" onclick="sortArtist();" >
-									<formatted-string class="sort-text">
-										가수명순
-										<i class="fa-solid fa-arrow-down-short-wide"></i>
-									</formatted-string>
-								</button>
-								<button type="button" class="sort-button clickable" id="bySong" onclick="sortSong();">
-									<formatted-string class="sort-text">
-										곡명순
-										<i class="fa-solid fa-arrow-down-short-wide"></i>
-									</formatted-string>
-								</button>
-								<button type="button" class="sort-button clickable button-selected" id="byAdd" onclick="sortAdded();">
-									<formatted-string class="sort-text">
-										등록순
-										<i class="fa-solid fa-arrow-down-short-wide"></i>
-									</formatted-string>
-								</button>
-							</div>
-						</div>
-						
-						<!----------------------------------- 헤더 분류 선택자 -->
-						<div class="selector">
-							
-							<!----------------------------------- 장르 목록 -->
-							<genre class="genre-list">
-							</genre>
-						</div>	
-					</div>
-					<!----------------------------------- End - 헤더 -->
+                    <!----------------------------------- 헤더 분류 선택자 -->
+                    <div class="selector">
+                        <!----------------------------------- 대분류 선택자 -->
+                        
+                        <category>
+                        </category>
+                        <!----------------------------------- 정렬 선택자 -->
+                        <div class="sort-select">
+                            <button type="button" class="sort-button clickable" id="byArtist" onclick="sortArtist();">
+                                <formatted-string class="sort-text">
+                                    가수명순
+                                    <i class="fa-solid fa-arrow-down-short-wide"></i>
+                                </formatted-string>
+                            </button>
+                            <button type="button" class="sort-button clickable" id="bySong" onclick="sortSong();">
+                                <formatted-string class="sort-text">
+                                    곡명순
+                                    <i class="fa-solid fa-arrow-down-short-wide"></i>
+                                </formatted-string>
+                            </button>
+                            <button type="button" class="sort-button clickable button-selected" id="byAdd" onclick="sortAdded();">
+                                <formatted-string class="sort-text">
+                                    등록순
+                                    <i class="fa-solid fa-arrow-down-short-wide"></i>
+                                </formatted-string>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!----------------------------------- 헤더 분류 선택자 -->
+                    <div class="selector">
+                        
+                        <!----------------------------------- 장르 목록 -->
+                        <genre class="genre-list">
+                        </genre>
+                    </div>  
+                </div>
+                <!----------------------------------- End - 헤더 -->
 
-					<!----------------------------------- 노래 목록 -->
-					<section class="music-list" id="musicList">
-					</section>
+                <!----------------------------------- 노래 목록 -->
+                <section class="music-list" id="musicList">
+                </section>
 
-				</div>
-				<!----------------------------------- End - 모든 노래, 검색 결과 -->
+            </div>
+            <!----------------------------------- End - 모든 노래, 검색 결과 -->
 
-			</div>
-			<div id="toast"></div>
+        </div>
+        <div id="toast"></div>
 
-			<!----------------------------------- 좌측 사이드바 -->
-			<div class="sidebar-wrapper" id="sidebar-wrapper-id">
-				<div class="sidebar" id="sidebar-id">
-					<!--
-					<button id="button" class="cross-icon">
-						<i class="fa-solid fa-xmark"></i>
-					</button>
-					-->
+        <!----------------------------------- 좌측 사이드바 -->
+        <div class="sidebar-wrapper" id="sidebar-wrapper-id">
+            <div class="sidebar" id="sidebar-id">
+                <!--
+                <button id="button" class="cross-icon">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                -->
 
-					<!----------------------------------- 사이드바 상단 -->
-					<div class="sidebar-header">
-						<h1 class="sidebar-header-content">
-							<formatted-string class="sidebar-header-text">
-							</formatted-string>
-						</h1>
-					</div>
-					<div class="sidebar-img">
-						<!----------------------------------- 프로필 위치 클릭시 이동하는 페이지 -->
-						<a href="https://chzzk.naver.com/ce31de9b9a68805be3d6ecee0c2a82d5">
-							<img id="profile-pic" class="bg-image bg-image-blur"></img>
-							<img id="profile-pic" class="bg-image"></img>
-						</a>
-					</div>
+                <!----------------------------------- 사이드바 상단 -->
+                <div class="sidebar-header">
+                    <h1 class="sidebar-header-content">
+                        <formatted-string class="sidebar-header-text">
+                        </formatted-string>
+                    </h1>
+                </div>
+                <div class="sidebar-img">
+                    <!----------------------------------- 프로필 위치 클릭시 이동하는 페이지 -->
+                    <a href="https://chzzk.naver.com/ce31de9b9a68805be3d6ecee0c2a82d5">
+                        <img id="profile-pic" class="bg-image bg-image-blur"></img>
+                        <img id="profile-pic" class="bg-image"></img>
+                    </a>
+                </div>
 
-					<!----------------------------------- 설명 -->
-					<ul class="ul-introduction">
-					<announcement class="introduction" id="introduction_">
-					</announcement>
-					</ul>
-				</div>
-			</div>
+                <!----------------------------------- 설명 -->
+                <ul class="ul-introduction">
+                <announcement class="introduction" id="introduction_">
+                </announcement>
+                </ul>
+            </div>
+        </div>
 
+        <!----------------------------------- 모바일 상단바 -->
+        <div class="nav">
+            <div class="nav-head">
+                <h1>
+                    <formatted-string class="sidebar-header-text">
+                    </formatted-string>
+                </h1>
+            </div>
+            <button type="button" class="menu-button" id="openMenu">
+                <i class="fa-solid fa-bars" id="menu-icon"></i>
+            </button>
+        </div>
 
-			<!----------------------------------- 모바일 상단바 -->
-			<div class="nav">
-				<div class="nav-head">
-					<h1>
-						<formatted-string class="sidebar-header-text">
-						</formatted-string>
-					</h1>
-				</div>
-				<button type="button" class="menu-button" id="openMenu">
-					<i class="fa-solid fa-bars" id="menu-icon"></i>
-				</button>
-			</div>
-
-			<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-			<script src="scripts/google-sheet.js"></script>
-			<script src="scripts/func.js"></script>
-		</div>
-	</body>
-</html> 
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="scripts/google-sheet.js"></script>
+        <script src="scripts/func.js"></script>
+    </div>
+</body>
+</html>
