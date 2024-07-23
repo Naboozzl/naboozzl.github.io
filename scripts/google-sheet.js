@@ -372,7 +372,7 @@ function random_select(jsonObj, num) {
 		infoSong.appendChild(infoPrice);
 
 		if (vv > boom) {
-			infoSong.textContent = "달피가 낼룸 먹어버림!";
+			infoSong.textContent = "미래가 우마이 함!";
 			infoArtist.textContent = "원래는 '" + musiclist[rnd].song + "'";
 			coverImg.src = noCover;
 		}
