@@ -6,7 +6,7 @@ var random = document.querySelector('random');
 
 let myKey = "1K3SJBgEIKVZFwzyytLklSo02gP74Sz5dxKydBtDusiw"; // 스프레드시트 KEY
 
-let gid = "1537295081"; // 목록이 있는 시트의 gid
+let gid = "68819746"; // 목록이 있는 시트의 gid
 
 let noCover = `/dalpi_musicbook/profile.png`;
 
