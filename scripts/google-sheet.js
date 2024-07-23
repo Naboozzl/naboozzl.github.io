@@ -4,10 +4,10 @@ var genre = document.querySelector('genre');
 var category = document.querySelector('category');
 var random = document.querySelector('random');
 
-let myKey = "1c35_f_AFwTF5M31-3sAAcqYAk0JHEbuFHplhsbBrOBk"; // 스프레드시트 KEY
+let myKey = "1K3SJBgEIKVZFwzyytLklSo02gP74Sz5dxKydBtDusiw"; // 스프레드시트 KEY
 
-let noCover = `/type_musicbook/assets/noCover.jpg`;
-let gid = "1303736034" // 목록이 있는 시트의 gid
+let noCover = `/naboozzl.github.io/assets/noCover.jpg`;
+let gid = "1537295081" // 목록이 있는 시트의 gid
 
 var announcements;
 
