@@ -8,7 +8,7 @@ let myKey = "1K3SJBgEIKVZFwzyytLklSo02gP74Sz5dxKydBtDusiw"; // 스프레드시�
 
 let gid = "1537295081"; // 목록이 있는 시트의 gid
 
-let noCover = `/dalpi_musicbook/profile.png`;
+let noCover = `/dalpi_musicbook/profile.jpg`;
 
 
 var announcements;
