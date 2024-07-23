@@ -6,7 +6,7 @@ var random = document.querySelector('random');
 
 let myKey = "1K3SJBgEIKVZFwzyytLklSo02gP74Sz5dxKydBtDusiw"; // 스프레드시트 KEY
 
-let noCover = `https://cafeptthumb-phinf.pstatic.net/MjAyNDA3MjBfNTQg/MDAxNzIxNDg3MzM0OTY0.CtU2k-KuuG7h3W0bE9jiM0KPIZJ23vsv02uHY6bXboIg.w7X4jnM4sn0wQ4xJmCrV_-r6mqCznDzsRwgFPg998L4g.GIF/ezgif.com-crop_%2815%29.gif?type=w1600`;
+let noCover = `/naboozzl.github.io/assets/noCover.gif`;
 let gid = "1537295081" // 목록이 있는 시트의 gid
 
 var announcements;
